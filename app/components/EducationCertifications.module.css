@@ -1,0 +1,924 @@
+/* =========================
+   EDUCATION & CERTIFICATIONS
+========================= */
+
+.educationCertifications {
+  position: relative;
+  padding: 145px 0 120px;
+  background: #050505;
+  overflow: hidden;
+}
+
+
+/* section separator */
+
+.educationCertifications::before {
+  content: "";
+
+  position: absolute;
+  top: 0;
+  left: 50%;
+
+  width: min(1200px, 85%);
+  height: 1px;
+
+  transform: translateX(-50%);
+
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(196, 129, 54, 0.28),
+    transparent
+  );
+}
+
+
+/* subtle gold atmosphere */
+
+.educationCertifications::after {
+  content: "";
+
+  position: absolute;
+
+  top: 18%;
+  right: -300px;
+
+  width: 600px;
+  height: 600px;
+
+  background: radial-gradient(
+    circle,
+    rgba(196, 129, 54, 0.045),
+    transparent 70%
+  );
+
+  filter: blur(90px);
+
+  pointer-events: none;
+}
+
+
+/* =========================
+   CONTAINER
+========================= */
+
+.container {
+  position: relative;
+  z-index: 1;
+
+  max-width: 1400px;
+
+  margin: 0 auto;
+  padding: 0 50px;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.header {
+  margin-bottom: 80px;
+}
+
+.sectionHeading {
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+
+  margin-bottom: 20px;
+}
+
+.sectionNumber {
+  color: #7d603b;
+
+  font-size: 12px;
+  font-weight: 600;
+
+  letter-spacing: 1.5px;
+}
+
+.label {
+  color: #c48136;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  text-transform: uppercase;
+
+  letter-spacing: 3px;
+}
+
+.headerContent {
+  display: grid;
+
+  grid-template-columns: 0.9fr 1fr;
+
+  align-items: end;
+
+  gap: 80px;
+}
+
+.title {
+  margin: 0;
+
+  font-family: "Playfair Display", serif;
+
+  font-size: clamp(48px, 5vw, 70px);
+  font-weight: 600;
+
+  line-height: 1;
+
+  letter-spacing: -1.5px;
+
+  color: #f1efea;
+}
+
+.subtitle {
+  max-width: 650px;
+
+  margin: 0;
+
+  color: #9f9c97;
+
+  font-size: 17px;
+
+  line-height: 1.85;
+}
+
+
+/* =========================
+   MAIN GRID
+========================= */
+
+.mainGrid {
+  display: grid;
+
+  grid-template-columns:
+    minmax(360px, 0.85fr)
+    minmax(0, 1.15fr);
+
+  align-items: start;
+
+  gap: 70px;
+}
+
+
+/* =========================
+   COLUMN HEADER
+========================= */
+
+.columnHeader {
+  display: flex;
+  align-items: center;
+
+  gap: 14px;
+
+  margin-bottom: 28px;
+
+  padding-bottom: 18px;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.075);
+}
+
+.columnNumber {
+  color: #c48136;
+
+  font-family: "Playfair Display", serif;
+
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.columnTitle {
+  margin: 0;
+
+  color: #e9e6df;
+
+  font-family: "Montserrat", sans-serif;
+
+  font-size: 15px;
+  font-weight: 600;
+
+  text-transform: uppercase;
+
+  letter-spacing: 1.8px;
+}
+
+
+/* =========================
+   EDUCATION COLUMN
+========================= */
+
+.educationColumn {
+  position: sticky;
+  top: 120px;
+}
+
+
+/* =========================
+   EDUCATION CARD
+========================= */
+
+.educationCard {
+  position: relative;
+
+  padding: 42px;
+
+  overflow: hidden;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(196, 129, 54, 0.045),
+      transparent 40%
+    ),
+    #0c0c0d;
+
+  border: 1px solid rgba(255, 255, 255, 0.075);
+
+  border-radius: 16px;
+
+  transition:
+    border-color 0.35s ease,
+    background 0.35s ease,
+    transform 0.35s ease;
+}
+
+.educationCard::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: 42px;
+
+  width: 110px;
+  height: 1px;
+
+  background: linear-gradient(
+    90deg,
+    #c48136,
+    #d4af37,
+    transparent
+  );
+
+  opacity: 0.75;
+}
+
+.educationCard:hover {
+  transform: translateY(-4px);
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(196, 129, 54, 0.065),
+      transparent 45%
+    ),
+    #101011;
+
+  border-color: rgba(196, 129, 54, 0.22);
+}
+
+
+/* =========================
+   EDUCATION TOP
+========================= */
+
+.educationTop {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 20px;
+
+  margin-bottom: 26px;
+}
+
+.period {
+  color: #c48136;
+
+  font-family: "Playfair Display", serif;
+
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.degreeType {
+  padding: 7px 11px;
+
+  background: rgba(196, 129, 54, 0.04);
+
+  border: 1px solid rgba(196, 129, 54, 0.16);
+
+  border-radius: 30px;
+
+  color: #a69f95;
+
+  font-size: 9px;
+  font-weight: 600;
+
+  text-transform: uppercase;
+
+  letter-spacing: 1.2px;
+}
+
+
+/* =========================
+   DEGREE
+========================= */
+
+.degree {
+  margin: 0 0 18px;
+
+  color: #f1efea;
+
+  font-family: "Playfair Display", serif;
+
+  font-size: clamp(31px, 3.2vw, 44px);
+  font-weight: 600;
+
+  line-height: 1.2;
+
+  letter-spacing: -0.7px;
+}
+
+.institutionRow {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 20px;
+
+  margin-bottom: 28px;
+}
+
+.institution {
+  color: #d0cbc3;
+
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.location {
+  color: #77736d;
+
+  font-size: 12px;
+}
+
+
+/* =========================
+   EDUCATION DESCRIPTION
+========================= */
+
+.educationDescription {
+  margin: 0;
+
+  color: #9b9892;
+
+  font-size: 15px;
+
+  line-height: 1.85;
+}
+
+
+/* =========================
+   ACADEMIC FOCUS
+========================= */
+
+.focusArea {
+  margin-top: 32px;
+
+  padding-top: 27px;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.065);
+}
+
+.focusTitle {
+  display: block;
+
+  margin-bottom: 17px;
+
+  color: #dad6ce;
+
+  font-size: 11px;
+  font-weight: 600;
+
+  text-transform: uppercase;
+
+  letter-spacing: 1.5px;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 8px;
+}
+
+.tag {
+  padding: 8px 12px;
+
+  background: rgba(196, 129, 54, 0.035);
+
+  border: 1px solid rgba(196, 129, 54, 0.14);
+
+  border-radius: 5px;
+
+  color: #b9b4ac;
+
+  font-size: 10.5px;
+  font-weight: 500;
+
+  transition:
+    color 0.25s ease,
+    border-color 0.25s ease,
+    background 0.25s ease,
+    transform 0.25s ease;
+}
+
+.tag:hover {
+  color: #ffffff;
+
+  background: rgba(196, 129, 54, 0.09);
+
+  border-color: rgba(212, 175, 55, 0.45);
+
+  transform: translateY(-2px);
+}
+
+
+/* =========================
+   CERTIFICATIONS COLUMN
+========================= */
+
+.certificationsColumn {
+  min-width: 0;
+}
+
+.certificationList {
+  display: flex;
+  flex-direction: column;
+
+  gap: 14px;
+}
+
+
+/* =========================
+   CERTIFICATE ITEM
+========================= */
+
+.certificate {
+  position: relative;
+
+  padding: 30px 32px;
+
+  background: #0c0c0d;
+
+  border: 1px solid rgba(255, 255, 255, 0.07);
+
+  border-radius: 14px;
+
+  overflow: hidden;
+
+  transition:
+    background 0.3s ease,
+    border-color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.certificate::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  width: 3px;
+  height: 100%;
+
+  background: linear-gradient(
+    to bottom,
+    #c48136,
+    #d4af37
+  );
+
+  opacity: 0;
+
+  transition: opacity 0.3s ease;
+}
+
+.certificate:hover {
+  transform: translateX(4px);
+
+  background: #101011;
+
+  border-color: rgba(196, 129, 54, 0.2);
+}
+
+.certificate:hover::before {
+  opacity: 1;
+}
+
+
+/* =========================
+   CERTIFICATE TOP
+========================= */
+
+.certificateTop {
+  display: flex;
+
+  align-items: flex-start;
+  justify-content: space-between;
+
+  gap: 25px;
+}
+
+.certificateType {
+  display: inline-block;
+
+  margin-bottom: 10px;
+
+  color: #c48136;
+
+  font-size: 9px;
+  font-weight: 600;
+
+  text-transform: uppercase;
+
+  letter-spacing: 1.7px;
+}
+
+.certificateTitle {
+  margin: 0 0 7px;
+
+  color: #efebe4;
+
+  font-family: "Playfair Display", serif;
+
+  font-size: 25px;
+  font-weight: 600;
+
+  line-height: 1.25;
+
+  letter-spacing: -0.3px;
+}
+
+.issuer {
+  color: #9c9892;
+
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.year {
+  flex-shrink: 0;
+
+  color: #625c54;
+
+  font-family: "Playfair Display", serif;
+
+  font-size: 18px;
+  font-weight: 600;
+}
+
+
+/* =========================
+   CERTIFICATE DESCRIPTION
+========================= */
+
+.certificateDescription {
+  margin: 22px 0 0;
+
+  color: #8f8c87;
+
+  font-size: 13.5px;
+
+  line-height: 1.75;
+}
+
+
+/* =========================
+   CERTIFICATE BOTTOM
+========================= */
+
+.certificateBottom {
+  display: flex;
+
+  align-items: flex-end;
+  justify-content: space-between;
+
+  gap: 25px;
+
+  margin-top: 24px;
+
+  padding-top: 20px;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.055);
+}
+
+.certificateSkills {
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 7px;
+}
+
+.certificateSkill {
+  padding: 6px 9px;
+
+  background: rgba(196, 129, 54, 0.03);
+
+  border: 1px solid rgba(196, 129, 54, 0.12);
+
+  border-radius: 5px;
+
+  color: #a9a49c;
+
+  font-size: 9.5px;
+  font-weight: 500;
+}
+
+
+/* =========================
+   CREDENTIAL LINK
+========================= */
+
+.credentialLink {
+  flex-shrink: 0;
+
+  color: #c48136;
+
+  font-size: 11px;
+  font-weight: 600;
+
+  text-decoration: none;
+
+  transition:
+    color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.credentialLink:hover {
+  color: #d4af37;
+
+  transform: translate(2px, -2px);
+}
+
+
+/* =========================
+   BOTTOM STRIP
+========================= */
+
+.bottomStrip {
+  display: grid;
+
+  grid-template-columns: repeat(7, auto);
+
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 30px;
+
+  margin-top: 85px;
+
+  padding: 38px 0;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.075);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.075);
+}
+
+.bottomItem {
+  display: flex;
+  flex-direction: column;
+
+  gap: 9px;
+}
+
+.bottomLabel {
+  color: #706c66;
+
+  font-size: 10px;
+  font-weight: 600;
+
+  text-transform: uppercase;
+
+  letter-spacing: 1.6px;
+}
+
+.bottomValue {
+  color: #e0dcd5;
+
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.bottomDivider {
+  width: 1px;
+  height: 35px;
+
+  background: rgba(255, 255, 255, 0.075);
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 1100px) {
+  .container {
+    padding: 0 35px;
+  }
+
+  .headerContent {
+    gap: 50px;
+  }
+
+  .mainGrid {
+    gap: 45px;
+  }
+
+  .educationCard {
+    padding: 35px;
+  }
+
+  .certificate {
+    padding: 28px;
+  }
+}
+
+
+/* =========================
+   TABLET SMALL
+========================= */
+
+@media (max-width: 900px) {
+  .educationCertifications {
+    padding: 110px 0 90px;
+  }
+
+  .header {
+    margin-bottom: 60px;
+  }
+
+  .headerContent {
+    grid-template-columns: 1fr;
+
+    gap: 25px;
+  }
+
+  .subtitle {
+    max-width: 700px;
+  }
+
+  .mainGrid {
+    grid-template-columns: 1fr;
+
+    gap: 60px;
+  }
+
+  .educationColumn {
+    position: static;
+  }
+
+  .bottomStrip {
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 35px 50px;
+  }
+
+  .bottomDivider {
+    display: none;
+  }
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+  .educationCertifications {
+    padding: 85px 0 70px;
+  }
+
+  .container {
+    padding: 0 20px;
+  }
+
+  .header {
+    margin-bottom: 45px;
+  }
+
+  .sectionHeading {
+    margin-bottom: 16px;
+  }
+
+  .title {
+    font-size: 42px;
+  }
+
+  .subtitle {
+    font-size: 15px;
+
+    line-height: 1.8;
+  }
+
+  .mainGrid {
+    gap: 50px;
+  }
+
+  .columnHeader {
+    margin-bottom: 22px;
+  }
+
+  .educationCard {
+    padding: 28px 24px;
+
+    border-radius: 13px;
+  }
+
+  .educationCard::before {
+    left: 24px;
+  }
+
+  .educationTop {
+    align-items: flex-start;
+
+    flex-direction: column;
+
+    gap: 12px;
+  }
+
+  .degree {
+    font-size: 31px;
+  }
+
+  .institutionRow {
+    align-items: flex-start;
+
+    flex-direction: column;
+
+    gap: 6px;
+  }
+
+  .educationDescription {
+    font-size: 14px;
+  }
+
+  .certificateList {
+    gap: 12px;
+  }
+
+  .certificate {
+    padding: 25px 22px;
+
+    border-radius: 12px;
+  }
+
+  .certificateTop {
+    gap: 18px;
+  }
+
+  .certificateTitle {
+    font-size: 22px;
+  }
+
+  .year {
+    font-size: 16px;
+  }
+
+  .certificateDescription {
+    font-size: 13px;
+  }
+
+  .certificateBottom {
+    align-items: flex-start;
+
+    flex-direction: column;
+  }
+
+  .bottomStrip {
+    grid-template-columns: 1fr;
+
+    gap: 0;
+
+    margin-top: 60px;
+
+    padding: 0;
+  }
+
+  .bottomItem {
+    padding: 20px 0;
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  }
+
+  .bottomItem:last-child {
+    border-bottom: none;
+  }
+}

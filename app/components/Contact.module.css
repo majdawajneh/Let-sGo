@@ -1,0 +1,1015 @@
+/* =========================
+   CONTACT
+========================= */
+
+.contact {
+  position: relative;
+
+  padding: 145px 0 90px;
+
+  background: #050505;
+
+  overflow: hidden;
+}
+
+
+/* Section separator */
+
+.contact::before {
+  content: "";
+
+  position: absolute;
+  top: 0;
+  left: 50%;
+
+  width: min(1200px, 85%);
+  height: 1px;
+
+  transform: translateX(-50%);
+
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(196, 129, 54, 0.28),
+    transparent
+  );
+}
+
+
+/* Ambient gold light */
+
+.contact::after {
+  content: "";
+
+  position: absolute;
+
+  top: 10%;
+  right: -300px;
+
+  width: 620px;
+  height: 620px;
+
+  background: radial-gradient(
+    circle,
+    rgba(196, 129, 54, 0.055),
+    transparent 70%
+  );
+
+  filter: blur(90px);
+
+  pointer-events: none;
+}
+
+
+/* =========================
+   CONTAINER
+========================= */
+
+.container {
+  position: relative;
+  z-index: 1;
+
+  max-width: 1400px;
+
+  margin: 0 auto;
+  padding: 0 50px;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.header {
+  margin-bottom: 80px;
+}
+
+
+.sectionHeading {
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+
+  margin-bottom: 20px;
+}
+
+
+.sectionNumber {
+  color: #7d603b;
+
+  font-size: 12px;
+  font-weight: 600;
+
+  letter-spacing: 1.5px;
+}
+
+
+.label {
+  color: #c48136;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  text-transform: uppercase;
+
+  letter-spacing: 3px;
+}
+
+
+.headerContent {
+  display: grid;
+
+  grid-template-columns: 1fr 0.9fr;
+
+  align-items: end;
+
+  gap: 80px;
+}
+
+
+.title {
+  max-width: 760px;
+
+  margin: 0;
+
+  font-family: "Playfair Display", serif;
+
+  color: #f1efea;
+
+  font-size: clamp(48px, 5vw, 70px);
+  font-weight: 600;
+
+  line-height: 1.05;
+
+  letter-spacing: -1.6px;
+}
+
+
+.titleAccent {
+  color: #c8c2b9;
+}
+
+
+.subtitle {
+  max-width: 620px;
+
+  margin: 0;
+
+  color: #9f9c97;
+
+  font-size: 17px;
+
+  line-height: 1.85;
+}
+
+
+/* =========================
+   MAIN CONTENT
+========================= */
+
+.content {
+  display: grid;
+
+  grid-template-columns:
+    minmax(320px, 0.82fr)
+    minmax(0, 1.18fr);
+
+  align-items: stretch;
+
+  gap: 65px;
+}
+
+
+/* =========================
+   CONTACT INFO
+========================= */
+
+.contactInfo {
+  display: flex;
+  flex-direction: column;
+
+  min-width: 0;
+
+  padding: 20px 0;
+}
+
+
+.infoEyebrow {
+  display: inline-block;
+
+  margin-bottom: 17px;
+
+  color: #c48136;
+
+  font-size: 11px;
+  font-weight: 600;
+
+  text-transform: uppercase;
+
+  letter-spacing: 2.5px;
+}
+
+
+.infoTitle {
+  max-width: 500px;
+
+  margin: 0 0 20px;
+
+  font-family: "Playfair Display", serif;
+
+  color: #f0ede7;
+
+  font-size: clamp(33px, 3.3vw, 46px);
+  font-weight: 600;
+
+  line-height: 1.2;
+
+  letter-spacing: -0.8px;
+}
+
+
+.infoDescription {
+  max-width: 540px;
+
+  margin: 0 0 42px;
+
+  color: #999690;
+
+  font-size: 16px;
+
+  line-height: 1.85;
+}
+
+
+/* =========================
+   CONTACT DETAILS
+========================= */
+
+.details {
+  display: flex;
+  flex-direction: column;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.075);
+}
+
+
+.detailItem {
+  display: grid;
+
+  grid-template-columns: 45px 1fr;
+
+  align-items: center;
+
+  gap: 18px;
+
+  padding: 24px 0;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.065);
+}
+
+
+.detailNumber {
+  color: #5f5141;
+
+  font-family: "Playfair Display", serif;
+
+  font-size: 14px;
+  font-weight: 600;
+}
+
+
+.detailContent {
+  display: flex;
+  flex-direction: column;
+
+  gap: 6px;
+}
+
+
+.detailLabel {
+  color: #77736d;
+
+  font-size: 10px;
+  font-weight: 600;
+
+  text-transform: uppercase;
+
+  letter-spacing: 1.7px;
+}
+
+
+.detailValue {
+  width: fit-content;
+
+  color: #dedad3;
+
+  font-size: 15px;
+  font-weight: 500;
+
+  text-decoration: none;
+
+  transition: color 0.25s ease;
+}
+
+
+a.detailValue:hover {
+  color: #d4af37;
+}
+
+
+/* =========================
+   SOCIAL LINKS
+========================= */
+
+.socialSection {
+  margin-top: 38px;
+}
+
+
+.socialLabel {
+  display: block;
+
+  margin-bottom: 15px;
+
+  color: #77736d;
+
+  font-size: 10px;
+  font-weight: 600;
+
+  text-transform: uppercase;
+
+  letter-spacing: 1.7px;
+}
+
+
+.socialLinks {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 10px;
+}
+
+
+.socialLink {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 9px;
+
+  padding: 11px 17px;
+
+  background: transparent;
+
+  border: 1px solid rgba(255, 255, 255, 0.1);
+
+  border-radius: 30px;
+
+  color: #beb9b1;
+
+  font-size: 12px;
+  font-weight: 600;
+
+  text-decoration: none;
+
+  transition:
+    color 0.25s ease,
+    border-color 0.25s ease,
+    background 0.25s ease,
+    transform 0.25s ease;
+}
+
+
+.socialLink:hover {
+  color: #ffffff;
+
+  border-color: rgba(196, 129, 54, 0.45);
+
+  background: rgba(196, 129, 54, 0.055);
+
+  transform: translateY(-2px);
+}
+
+
+.socialLink span {
+  color: #c48136;
+}
+
+
+/* =========================
+   AVAILABILITY
+========================= */
+
+.availability {
+  display: flex;
+
+  align-items: center;
+
+  gap: 14px;
+
+  margin-top: 42px;
+
+  padding: 20px 22px;
+
+  background: rgba(255, 255, 255, 0.018);
+
+  border: 1px solid rgba(255, 255, 255, 0.07);
+
+  border-radius: 10px;
+}
+
+
+.availabilityDot {
+  flex-shrink: 0;
+
+  width: 8px;
+  height: 8px;
+
+  background: #6fa080;
+
+  border-radius: 50%;
+
+  box-shadow:
+    0 0 0 5px rgba(111, 160, 128, 0.08);
+}
+
+
+.availability > div {
+  display: flex;
+  flex-direction: column;
+
+  gap: 4px;
+}
+
+
+.availabilityTitle {
+  color: #ddd9d2;
+
+  font-size: 13px;
+  font-weight: 600;
+}
+
+
+.availabilityText {
+  color: #77736d;
+
+  font-size: 11px;
+}
+
+
+/* =========================
+   FORM WRAPPER
+========================= */
+
+.formWrapper {
+  position: relative;
+
+  padding: 42px;
+
+  overflow: hidden;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(196, 129, 54, 0.04),
+      transparent 35%
+    ),
+    #0c0c0d;
+
+  border: 1px solid rgba(255, 255, 255, 0.075);
+
+  border-radius: 18px;
+}
+
+
+.formWrapper::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: 42px;
+
+  width: 120px;
+  height: 1px;
+
+  background: linear-gradient(
+    90deg,
+    #c48136,
+    #d4af37,
+    transparent
+  );
+
+  opacity: 0.8;
+}
+
+
+/* =========================
+   FORM HEADER
+========================= */
+
+.formHeader {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 25px;
+
+  margin-bottom: 35px;
+}
+
+
+.formLabel {
+  color: #ebe8e2;
+
+  font-family: "Playfair Display", serif;
+
+  font-size: 26px;
+  font-weight: 600;
+}
+
+
+.formNumber {
+  color: #5e5952;
+
+  font-size: 10px;
+  font-weight: 600;
+
+  letter-spacing: 1.4px;
+}
+
+
+/* =========================
+   FORM
+========================= */
+
+.form {
+  display: flex;
+  flex-direction: column;
+
+  gap: 24px;
+}
+
+
+.formRow {
+  display: grid;
+
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+
+  gap: 18px;
+}
+
+
+.field {
+  display: flex;
+  flex-direction: column;
+
+  gap: 9px;
+}
+
+
+.fieldLabel {
+  color: #8a857e;
+
+  font-size: 10px;
+  font-weight: 600;
+
+  text-transform: uppercase;
+
+  letter-spacing: 1.5px;
+}
+
+
+/* =========================
+   INPUTS
+========================= */
+
+.input,
+.textarea {
+  width: 100%;
+
+  padding: 15px 16px;
+
+  background: #09090a;
+
+  border: 1px solid rgba(255, 255, 255, 0.09);
+
+  border-radius: 7px;
+
+  color: #f0ede7;
+
+  font-family: "Montserrat", sans-serif;
+
+  font-size: 14px;
+  font-weight: 400;
+
+  outline: none;
+
+  transition:
+    border-color 0.25s ease,
+    background 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+
+.input {
+  min-height: 52px;
+}
+
+
+.textarea {
+  min-height: 160px;
+
+  resize: vertical;
+
+  line-height: 1.7;
+}
+
+
+.input::placeholder,
+.textarea::placeholder {
+  color: #53514d;
+}
+
+
+.input:hover,
+.textarea:hover {
+  border-color: rgba(255, 255, 255, 0.15);
+}
+
+
+.input:focus,
+.textarea:focus {
+  background: #0b0b0c;
+
+  border-color: rgba(196, 129, 54, 0.55);
+
+  box-shadow:
+    0 0 0 3px rgba(196, 129, 54, 0.055);
+}
+
+
+/* =========================
+   FORM BOTTOM
+========================= */
+
+.formBottom {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 30px;
+
+  margin-top: 8px;
+}
+
+
+.formNote {
+  max-width: 260px;
+
+  color: #706d67;
+
+  font-size: 10px;
+
+  line-height: 1.6;
+}
+
+
+/* =========================
+   SUBMIT BUTTON
+========================= */
+
+.submitBtn {
+  flex-shrink: 0;
+
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 10px;
+
+  padding: 18px 40px;
+
+  background: linear-gradient(
+    135deg,
+    #c48136 0%,
+    #d4af37 100%
+  );
+
+  border: none;
+
+  border-radius: 50px;
+
+  color: #ffffff;
+
+  font-family: "Montserrat", sans-serif;
+
+  font-size: 16px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 10px 30px rgba(196, 129, 54, 0.3);
+
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+
+.submitBtn:hover {
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 20px 40px rgba(196, 129, 54, 0.4);
+}
+
+
+.submitBtn svg {
+  transition: transform 0.3s ease;
+}
+
+
+.submitBtn:hover svg {
+  transform: translateX(5px);
+}
+
+
+/* =========================
+   BOTTOM STRIP
+========================= */
+
+.bottomStrip {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 25px;
+
+  margin-top: 90px;
+
+  padding-top: 32px;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.075);
+}
+
+
+.bottomText {
+  color: #77736d;
+
+  font-size: 11px;
+  font-weight: 500;
+
+  text-transform: uppercase;
+
+  letter-spacing: 1.3px;
+}
+
+
+.bottomLine {
+  width: 40px;
+  height: 1px;
+
+  background: linear-gradient(
+    90deg,
+    #c48136,
+    #d4af37
+  );
+
+  opacity: 0.6;
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 1100px) {
+
+  .container {
+    padding: 0 35px;
+  }
+
+
+  .headerContent {
+    gap: 50px;
+  }
+
+
+  .content {
+    gap: 45px;
+  }
+
+
+  .formWrapper {
+    padding: 36px;
+  }
+
+
+  .formWrapper::before {
+    left: 36px;
+  }
+}
+
+
+/* =========================
+   TABLET SMALL
+========================= */
+
+@media (max-width: 900px) {
+
+  .contact {
+    padding: 110px 0 80px;
+  }
+
+
+  .header {
+    margin-bottom: 60px;
+  }
+
+
+  .headerContent {
+    grid-template-columns: 1fr;
+
+    gap: 25px;
+  }
+
+
+  .subtitle {
+    max-width: 700px;
+  }
+
+
+  .content {
+    grid-template-columns: 1fr;
+
+    gap: 60px;
+  }
+
+
+  .contactInfo {
+    padding: 0;
+  }
+
+
+  .infoDescription {
+    max-width: 700px;
+  }
+
+
+  .bottomStrip {
+    margin-top: 70px;
+  }
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+  .contact {
+    padding: 85px 0 65px;
+  }
+
+
+  .container {
+    padding: 0 20px;
+  }
+
+
+  .header {
+    margin-bottom: 45px;
+  }
+
+
+  .sectionHeading {
+    margin-bottom: 16px;
+  }
+
+
+  .title {
+    font-size: 42px;
+  }
+
+
+  .subtitle {
+    font-size: 15px;
+
+    line-height: 1.8;
+  }
+
+
+  .infoTitle {
+    font-size: 32px;
+  }
+
+
+  .infoDescription {
+    font-size: 14px;
+  }
+
+
+  .detailItem {
+    grid-template-columns: 35px 1fr;
+
+    gap: 12px;
+
+    padding: 20px 0;
+  }
+
+
+  .socialLinks {
+    flex-direction: column;
+
+    align-items: stretch;
+  }
+
+
+  .socialLink {
+    width: 100%;
+  }
+
+
+  .availability {
+    padding: 18px;
+  }
+
+
+  .formWrapper {
+    padding: 28px 22px;
+
+    border-radius: 14px;
+  }
+
+
+  .formWrapper::before {
+    left: 22px;
+  }
+
+
+  .formHeader {
+    margin-bottom: 30px;
+  }
+
+
+  .formLabel {
+    font-size: 23px;
+  }
+
+
+  .formRow {
+    grid-template-columns: 1fr;
+  }
+
+
+  .input,
+  .textarea {
+    font-size: 13px;
+  }
+
+
+  .formBottom {
+    flex-direction: column;
+
+    align-items: stretch;
+  }
+
+
+  .formNote {
+    max-width: none;
+  }
+
+
+  .submitBtn {
+    width: 100%;
+
+    padding: 17px 30px;
+  }
+
+
+  .bottomStrip {
+    flex-direction: column;
+
+    gap: 12px;
+
+    margin-top: 55px;
+
+    text-align: center;
+  }
+
+
+  .bottomLine {
+    width: 1px;
+    height: 24px;
+  }
+}
