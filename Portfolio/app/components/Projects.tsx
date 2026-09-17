@@ -112,6 +112,7 @@ export default function Projects() {
       number: "06",
       title: "Developer Portfolio",
       category: "Personal Brand",
+      status: "",
       description:
         "A custom portfolio designed and developed to present my software engineering work, technical skills, projects, and professional direction.",
       technologies: [
