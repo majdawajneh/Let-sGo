@@ -123,7 +123,6 @@ export default function Projects() {
       image: "/assets/projects/Portfolio-HeroShot.png",
       code: "MA",
       featured: false,
-      status: "In Development",
       github: "https://github.com/majdawajneh/Let-sGo/tree/main/Portfolio",
       live: "",
     },
