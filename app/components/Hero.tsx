@@ -69,7 +69,7 @@ export default function Hero() {
             </a>
             <a
               href="/assets/cv/My cv.pdf"
-              download
+              download = "My cv.pdf"
               title="Majd Cv"
               rel="noopener noreferrer"
               className={styles.secondaryBtn}
