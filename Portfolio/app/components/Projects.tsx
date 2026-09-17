@@ -148,7 +148,7 @@ export default function Projects() {
         >
           <div className={styles.sectionHeading}>
             <span className={styles.sectionNumber}>03</span>
-            <span className={styles.label}>Portfolio</span>
+            <span className={styles.label}>Projects</span>
           </div>
 
           <div className={styles.headerContent}>
@@ -191,10 +191,7 @@ export default function Projects() {
               {/* PROJECT VISUAL */}
               <div className={styles.visual}>
         <div className={styles.visualTop}>
-          <span className={styles.projectNumber}>
-            {project.number}
-          </span>
-
+          
           <span
             className={`${styles.status} ${
               project.status === "Planned" ||
@@ -248,6 +245,9 @@ export default function Projects() {
 
               {/* PROJECT INFO */}
               <div className={styles.projectInfo}>
+                <span className={styles.projectNumber}>
+                  {project.number}
+                </span>
                 <span className={styles.category}>
                   {project.category}
                 </span>
