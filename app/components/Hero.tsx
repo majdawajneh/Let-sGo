@@ -68,8 +68,8 @@ export default function Hero() {
               GitHub ↗
             </a>
             <a
-              href="Your_Cv_Download"
-              download={"My cv.pdf"}
+              href="/assets/cv/My cv.pdf"
+              download
               title="Majd Cv"
               rel="noopener noreferrer"
               className={styles.secondaryBtn}
