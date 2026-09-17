@@ -60,7 +60,7 @@ export default function Hero() {
             </Link>
 
             <a
-              href="https://github.com/majdawajneh/Let-sGo.git"
+              href="https://github.com/majdawajneh/Let-sGo"
               title="My GitHub Repo"
               target="_blank"
               rel="noopener noreferrer"
