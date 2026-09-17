@@ -120,11 +120,11 @@ export default function Projects() {
         "CSS Modules",
         "Framer Motion",
       ],
-      image: null,
+      image: "/assets/projects/Portfolio-HeroShot.png",
       code: "MA",
       featured: false,
       status: "In Development",
-      github: "",
+      github: "https://github.com/majdawajneh/Let-sGo/tree/main/Portfolio",
       live: "",
     },
   ];
@@ -190,43 +190,61 @@ export default function Projects() {
             >
               {/* PROJECT VISUAL */}
               <div className={styles.visual}>
-                {project.image ? (
-                  <Image
-                    src={project.image}
-                    alt={project.title}
-                    className={styles.image}
-                    width={1200}
-                    height={800}
-                  />
-                ) : (
-                  <div className={styles.visualPlaceholder}>
-                    <span className={styles.placeholderCode}>
-                      {project.code}
-                    </span>
+        <div className={styles.visualTop}>
+          <span className={styles.projectNumber}>
+            {project.number}
+          </span>
 
-                    <span className={styles.placeholderText}>
-                      Project Preview
-                    </span>
-                  </div>
-                )}
+          <span
+            className={`${styles.status} ${
+              project.status === "Planned" ||
+              project.status === "Coming Soon"
+                ? styles.futureStatus
+                : ""
+            }`}
+          >
+            {project.status}
+          </span>
+        </div>
 
-                <div className={styles.visualTop}>
-                  <span className={styles.projectNumber}>
-                    {project.number}
-                  </span>
+        {project.image ? (
+          <a
+            href={project.github}
+            target="_blank"
+            rel="noopener noreferrer"
+            className={styles.projectImageLink}
+            title={`View ${project.title} on GitHub`}
+          >
+            <div className={styles.projectImage}>
+              <Image
+                src={project.image}
+                alt={`${project.title} preview`}
+                fill
+                sizes="(max-width: 768px) 100vw, 50vw"
+                className={styles.image}
+              />
 
-                  <span
-                    className={`${styles.status} ${
-                      project.status === "Planned" ||
-                      project.status === "Coming Soon"
-                        ? styles.futureStatus
-                        : ""
-                    }`}
-                  >
-                    {project.status}
-                  </span>
-                </div>
+              <div className={styles.imageOverlay}>
+                <span>View Source on GitHub ↗</span>
               </div>
+            </div>
+          </a>
+        ) : (
+          <div className={styles.placeholder}>
+            <span className={styles.placeholderLetters}>
+              {project.title
+                .split(" ")
+                .map((word) => word[0])
+                .join("")
+                .slice(0, 2)}
+            </span>
+
+            <span className={styles.placeholderText}>
+              Project Preview
+            </span>
+          </div>
+        )}
+      </div>
 
               {/* PROJECT INFO */}
               <div className={styles.projectInfo}>
