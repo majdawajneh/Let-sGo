@@ -312,7 +312,7 @@ export default function Projects() {
           </span>
 
           <a
-            href="YOUR_GITHUB_LINK"
+            href="https://github.com/majdawajneh/Let-sGo"
             target="_blank"
             rel="noopener noreferrer"
             className={styles.githubButton}

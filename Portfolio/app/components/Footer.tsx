@@ -20,7 +20,7 @@ export default function Footer() {
   const socialLinks = [
     {
       name: "GitHub",
-      href: "YOUR_GITHUB_LINK",
+      href: "https://github.com/majdawajneh/Let-sGo",
     },
     {
       name: "LinkedIn",
