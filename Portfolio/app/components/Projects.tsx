@@ -191,17 +191,18 @@ export default function Projects() {
               {/* PROJECT VISUAL */}
               <div className={styles.visual}>
         <div className={styles.visualTop}>
-          
-          <span
-            className={`${styles.status} ${
-              project.status === "Planned" ||
-              project.status === "Coming Soon"
-                ? styles.futureStatus
-                : ""
-            }`}
-          >
-            {project.status}
-          </span>
+          {project.status && (
+            <span
+              className={`${styles.status} ${
+                project.status === "Planned" ||
+                project.status === "Coming Soon"
+                  ? styles.futureStatus
+                  : ""
+              }`}
+            >
+              {project.status}
+            </span>
+          )}
         </div>
 
         {project.image ? (
