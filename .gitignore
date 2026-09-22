@@ -31,3 +31,16 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Visual Studio / .NET
+.vs/
+**/.vs/
+
+bin/
+obj/
+**/bin/
+**/obj/
+
+*.user
+*.suo
+*.log
