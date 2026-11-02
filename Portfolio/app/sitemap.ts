@@ -1,15 +1,28 @@
 import type { MetadataRoute } from "next";
-import { posts } from "@/data/posts";
-import { projects } from "@/data/projects";
+
+export const dynamic = "force-static";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://example.com";
-  const now = new Date();
+  const baseUrl = "https://let-sgo.pages.dev/";
+
   return [
-    { url: baseUrl, lastModified: now },
-    { url: `${baseUrl}/work`, lastModified: now },
-    { url: `${baseUrl}/blog`, lastModified: now },
-    ...projects.map((project) => ({ url: `${baseUrl}/work/${project.slug}`, lastModified: now })),
-    ...posts.map((post) => ({ url: `${baseUrl}/blog/${post.slug}`, lastModified: new Date(post.date) })),
+    {
+      url: baseUrl,
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 1,
+    },
+    {
+      url: `${baseUrl}/work`,
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/blog`,
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
   ];
 }

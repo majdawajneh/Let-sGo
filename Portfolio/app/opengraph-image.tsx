@@ -1,5 +1,5 @@
 import { ImageResponse } from "next/og";
-
+export const dynamic = "force-static";
 export const alt =
   "Majd Al-Awajneh — Software Engineer & Full-Stack Developer";
 
