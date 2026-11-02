@@ -41,7 +41,7 @@ export const projects: Project[] = [
     description:
       "A multilingual business and education website focused on Germany-related services, consulting, training, and institutional solutions.",
 
-    image: "/images/Western-Bridge.webp",
+    image: "/images/western-bridge.webp",
 
     tech: [
       "Next.js",
