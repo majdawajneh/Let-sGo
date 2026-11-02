@@ -1,27 +1,25 @@
-import React from "react";
-import Navbar from "./components/Navbar";
-import Hero from "./components/Hero";
-import About from "./components/About";
-import Services from "./components/Services";
-import Projects from "./components/Projects";
-import Contact from "./components/Contact";
-import Footer from "./components/Footer";
-import Experience from "./components/Experience";
-import EducationCertifications from "./components/EducationCertifications";
+import { Hero } from "@/components/Hero";
+import { About } from "@/components/About";
+import { Tagline } from "@/components/Tagline";
+import { Services } from "@/components/Services";
+import { TechStack } from "@/components/TechStack";
+import { FeaturedProjects } from "@/components/FeaturedProjects";
+import { Testimonials } from "@/components/Testimonials";
+import { BlogPreview } from "@/components/BlogPreview";
+import { Contact } from "@/components/Contact";
 
-export default function Home() {
+export default function HomePage() {
   return (
-    <main>
-      <Navbar />
+    <>
       <Hero />
       <About />
+      <Tagline />
       <Services />
-      <Projects />
-      <Experience/>
-      <EducationCertifications/>
+      <TechStack />
+      <FeaturedProjects />
+      <Testimonials />
+      <BlogPreview />
       <Contact />
-      <Footer />
-    </main>
+    </>
   );
 }
-
