@@ -1,0 +1,829 @@
+/* =========================
+   SERVICES
+========================= */
+
+.services {
+  position: relative;
+  padding: 145px 0 120px;
+  background: #050505;
+  overflow: hidden;
+}
+
+
+/* subtle separator from previous section */
+.services::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+
+  width: min(1200px, 85%);
+  height: 1px;
+
+  transform: translateX(-50%);
+
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(196, 129, 54, 0.28),
+    transparent
+  );
+}
+
+
+/* very subtle gold atmosphere */
+.services::after {
+  content: "";
+  position: absolute;
+
+  top: 15%;
+  left: -280px;
+
+  width: 550px;
+  height: 550px;
+
+  background: radial-gradient(
+    circle,
+    rgba(196, 129, 54, 0.045),
+    transparent 70%
+  );
+
+  filter: blur(80px);
+
+  pointer-events: none;
+}
+
+
+/* =========================
+   CONTAINER
+========================= */
+
+.container {
+  position: relative;
+  z-index: 1;
+
+  max-width: 1400px;
+
+  margin: 0 auto;
+  padding: 0 50px;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.header {
+  margin-bottom: 70px;
+}
+
+
+.sectionHeading {
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+
+  margin-bottom: 20px;
+}
+
+
+.sectionNumber {
+  color: #7d603b;
+
+  font-size: 12px;
+  font-weight: 600;
+
+  letter-spacing: 1.5px;
+}
+
+
+.label {
+  color: #c48136;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  text-transform: uppercase;
+
+  letter-spacing: 3px;
+}
+
+
+.headerContent {
+  display: grid;
+
+  grid-template-columns: 0.9fr 1fr;
+
+  align-items: end;
+
+  gap: 80px;
+}
+
+
+.title {
+  margin: 0;
+
+  font-family: "Playfair Display", serif;
+
+  font-size: clamp(48px, 5vw, 70px);
+  font-weight: 600;
+
+  line-height: 1;
+
+  letter-spacing: -1.5px;
+
+  color: #f1efea;
+}
+
+
+.subtitle {
+  max-width: 650px;
+
+  margin: 0;
+
+  color: #9f9c97;
+
+  font-size: 17px;
+
+  line-height: 1.85;
+}
+
+
+/* =========================
+   SERVICES GRID
+========================= */
+
+.grid {
+  display: grid;
+
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+
+  gap: 20px;
+}
+
+
+/* =========================
+   SERVICE CARD
+========================= */
+
+.card {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+
+  min-height: 390px;
+
+  padding: 38px;
+
+  overflow: hidden;
+
+  background: #0d0d0e;
+
+  border: 1px solid rgba(255, 255, 255, 0.075);
+
+  border-radius: 16px;
+
+  transition:
+    transform 0.35s ease,
+    border-color 0.35s ease,
+    background 0.35s ease;
+}
+
+
+/* elegant line instead of AI-style glow */
+.card::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: 38px;
+  right: 38px;
+
+  height: 1px;
+
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(196, 129, 54, 0.8),
+    transparent
+  );
+
+  transform: scaleX(0);
+
+  transition: transform 0.4s ease;
+}
+
+
+.card:hover {
+  transform: translateY(-4px);
+
+  border-color: rgba(196, 129, 54, 0.25);
+
+  background: #101011;
+}
+
+
+.card:hover::before {
+  transform: scaleX(1);
+}
+
+
+/* =========================
+   FEATURED CARDS
+========================= */
+
+.featuredCard {
+  grid-column: 1 / -1;
+
+  min-height: 330px;
+
+  padding: 45px 48px;
+
+  background:
+    linear-gradient(
+      115deg,
+      rgba(196, 129, 54, 0.065) 0%,
+      rgba(196, 129, 54, 0.015) 30%,
+      transparent 60%
+    ),
+    #0d0d0e;
+
+  border-color: rgba(196, 129, 54, 0.15);
+}
+
+
+.featuredCard .cardContent {
+  max-width: 760px;
+}
+
+
+.featuredCard .cardTitle {
+  font-size: clamp(30px, 3vw, 40px);
+}
+
+
+.featuredCard .cardDescription {
+  max-width: 720px;
+
+  font-size: 16px;
+}
+
+
+/* =========================
+   CARD TOP
+========================= */
+
+.cardTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom: 55px;
+}
+
+
+.iconNumber {
+  font-family: "Playfair Display", serif;
+
+  font-size: 28px;
+  font-weight: 600;
+
+  line-height: 1;
+
+  background: linear-gradient(
+    135deg,
+    #c48136 0%,
+    #d4af37 100%
+  );
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  background-clip: text;
+}
+
+
+.cardArrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 38px;
+  height: 38px;
+
+  color: #77736c;
+
+  font-size: 20px;
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  border-radius: 50%;
+
+  transition:
+    color 0.3s ease,
+    border-color 0.3s ease,
+    transform 0.3s ease,
+    background 0.3s ease;
+}
+
+
+.card:hover .cardArrow {
+  color: #ffffff;
+
+  border-color: rgba(196, 129, 54, 0.45);
+
+  background: rgba(196, 129, 54, 0.08);
+
+  transform: rotate(45deg);
+}
+
+
+/* =========================
+   CARD CONTENT
+========================= */
+
+.cardContent {
+  flex: 1;
+}
+
+
+.cardTitle {
+  margin: 0 0 18px;
+
+  color: #f0ede7;
+
+  font-family: "Montserrat", sans-serif;
+
+  font-size: 26px;
+  font-weight: 600;
+
+  line-height: 1.3;
+
+  letter-spacing: -0.4px;
+}
+
+
+.cardDescription {
+  max-width: 580px;
+
+  margin: 0;
+
+  color: #95928d;
+
+  font-size: 15px;
+
+  line-height: 1.8;
+}
+
+
+/* =========================
+   TECHNOLOGY TAGS
+========================= */
+
+.cardFooter {
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 8px;
+
+  margin-top: 35px;
+
+  padding-top: 24px;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+
+.technology {
+  display: inline-flex;
+  align-items: center;
+
+  padding: 7px 11px;
+
+  background: rgba(196, 129, 54, 0.035);
+
+  border: 1px solid rgba(196, 129, 54, 0.14);
+
+  border-radius: 5px;
+
+  color: #bbb6ae;
+
+  font-size: 11px;
+  font-weight: 500;
+
+  letter-spacing: 0.25px;
+
+  transition:
+    color 0.25s ease,
+    border-color 0.25s ease,
+    background 0.25s ease;
+}
+
+
+.card:hover .technology {
+  border-color: rgba(196, 129, 54, 0.23);
+}
+
+
+.technology:hover {
+  color: #ffffff;
+
+  border-color: rgba(212, 175, 55, 0.48);
+
+  background: rgba(196, 129, 54, 0.09);
+}
+
+
+/* =========================
+   BOTTOM CTA SECTION
+========================= */
+
+.bottomSection {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 70px;
+
+  margin-top: 80px;
+
+  padding: 55px 60px;
+
+  overflow: hidden;
+
+  background: #0c0c0d;
+
+  border: 1px solid rgba(255, 255, 255, 0.075);
+
+  border-radius: 18px;
+}
+
+
+/* subtle gold detail */
+.bottomSection::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  width: 180px;
+  height: 1px;
+
+  background: linear-gradient(
+    90deg,
+    #c48136,
+    #d4af37,
+    transparent
+  );
+}
+
+
+.bottomSection::after {
+  content: "";
+
+  position: absolute;
+
+  right: -180px;
+  bottom: -220px;
+
+  width: 420px;
+  height: 420px;
+
+  background: radial-gradient(
+    circle,
+    rgba(196, 129, 54, 0.07),
+    transparent 70%
+  );
+
+  pointer-events: none;
+}
+
+
+.bottomText {
+  position: relative;
+  z-index: 1;
+
+  max-width: 760px;
+}
+
+
+.bottomLabel {
+  display: block;
+
+  margin-bottom: 13px;
+
+  color: #c48136;
+
+  font-size: 12px;
+  font-weight: 600;
+
+  text-transform: uppercase;
+
+  letter-spacing: 2.5px;
+}
+
+
+.bottomTitle {
+  margin: 0;
+
+  font-family: "Playfair Display", serif;
+
+  color: #f1efea;
+
+  font-size: clamp(30px, 3.3vw, 45px);
+  font-weight: 600;
+
+  line-height: 1.25;
+
+  letter-spacing: -0.8px;
+}
+
+
+.bottomTitle span {
+  color: #b8b2a9;
+}
+
+
+/* =========================
+   CTA BUTTON
+========================= */
+
+.contactButton {
+  position: relative;
+  z-index: 1;
+
+  flex-shrink: 0;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 10px;
+
+  padding: 18px 40px;
+
+  background: linear-gradient(
+    135deg,
+    #c48136 0%,
+    #d4af37 100%
+  );
+
+  color: white;
+
+  border-radius: 50px;
+
+  font-size: 16px;
+  font-weight: 600;
+
+  text-decoration: none;
+
+  box-shadow:
+    0 10px 30px rgba(196, 129, 54, 0.3);
+
+  transition: all 0.4s ease;
+}
+
+
+.contactButton:hover {
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 20px 40px rgba(196, 129, 54, 0.4);
+}
+
+
+.contactButton svg {
+  transition: transform 0.3s ease;
+}
+
+
+.contactButton:hover svg {
+  transform: translateX(5px);
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 1100px) {
+
+  .container {
+    padding: 0 35px;
+  }
+
+
+  .headerContent {
+    gap: 50px;
+  }
+
+
+  .card {
+    min-height: 410px;
+
+    padding: 34px;
+  }
+
+
+  .featuredCard {
+    min-height: 320px;
+
+    padding: 42px;
+  }
+
+
+  .bottomSection {
+    padding: 45px;
+  }
+}
+
+
+/* =========================
+   TABLET SMALL
+========================= */
+
+@media (max-width: 900px) {
+
+  .services {
+    padding: 110px 0 90px;
+  }
+
+
+  .header {
+    margin-bottom: 55px;
+  }
+
+
+  .headerContent {
+    grid-template-columns: 1fr;
+
+    gap: 25px;
+  }
+
+
+  .subtitle {
+    max-width: 700px;
+  }
+
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+
+  .featuredCard {
+    grid-column: auto;
+  }
+
+
+  .card,
+  .featuredCard {
+    min-height: auto;
+
+    padding: 36px;
+  }
+
+
+  .cardTop {
+    margin-bottom: 45px;
+  }
+
+
+  .bottomSection {
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 35px;
+  }
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+  .services {
+    padding: 85px 0 70px;
+  }
+
+
+  .container {
+    padding: 0 20px;
+  }
+
+
+  .header {
+    margin-bottom: 45px;
+  }
+
+
+  .sectionHeading {
+    margin-bottom: 16px;
+  }
+
+
+  .title {
+    font-size: 42px;
+  }
+
+
+  .subtitle {
+    font-size: 15px;
+
+    line-height: 1.8;
+  }
+
+
+  .grid {
+    gap: 14px;
+  }
+
+
+  .card,
+  .featuredCard {
+    padding: 28px 24px;
+
+    border-radius: 13px;
+  }
+
+
+  .card::before {
+    left: 24px;
+    right: 24px;
+  }
+
+
+  .cardTop {
+    margin-bottom: 38px;
+  }
+
+
+  .iconNumber {
+    font-size: 24px;
+  }
+
+
+  .cardArrow {
+    width: 34px;
+    height: 34px;
+
+    font-size: 18px;
+  }
+
+
+  .cardTitle,
+  .featuredCard .cardTitle {
+    font-size: 23px;
+  }
+
+
+  .cardDescription,
+  .featuredCard .cardDescription {
+    font-size: 14px;
+  }
+
+
+  .cardFooter {
+    margin-top: 28px;
+
+    padding-top: 20px;
+  }
+
+
+  .technology {
+    padding: 6px 9px;
+
+    font-size: 10px;
+  }
+
+
+  .bottomSection {
+    margin-top: 55px;
+
+    padding: 35px 25px;
+
+    border-radius: 14px;
+  }
+
+
+  .bottomTitle {
+    font-size: 31px;
+  }
+
+
+  .contactButton {
+    width: 100%;
+
+    padding: 17px 30px;
+  }
+}
