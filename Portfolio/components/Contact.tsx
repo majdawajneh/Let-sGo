@@ -8,47 +8,62 @@ export function Contact() {
   const [status, setStatus] = useState<"idle" | "sending" | "success" | "error">("idle");
   const [message, setMessage] = useState("");
 
-  async function onSubmit(event: FormEvent<HTMLFormElement>) {
-    event.preventDefault();
-    setStatus("sending");
-    setMessage("");
+ async function onSubmit(event: FormEvent<HTMLFormElement>) {
+  event.preventDefault();
+  setStatus("sending");
+  setMessage("");
 
-    const form = new FormData(event.currentTarget);
-    const payload = {
-      name: String(form.get("name") || "").trim(),
-      email: String(form.get("email") || "").trim(),
-      project: String(form.get("project") || "").trim(),
-    };
+  const currentForm = event.currentTarget;
+  const form = new FormData(currentForm);
 
-    if (!payload.name || !payload.email || !payload.project) {
-      setStatus("error");
-      setMessage("Please complete all fields.");
-      return;
-    }
+  const payload = {
+    name: String(form.get("name") || "").trim(),
+    email: String(form.get("email") || "").trim(),
+    project: String(form.get("project") || "").trim(),
+  };
 
-    if (!/^\S+@\S+\.\S+$/.test(payload.email)) {
-      setStatus("error");
-      setMessage("Please enter a valid email address.");
-      return;
-    }
-
-    try {
-      const response = await fetch("/api/contact", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(payload),
-      });
-
-      if (!response.ok) throw new Error("Request failed");
-
-      event.currentTarget.reset();
-      setStatus("success");
-      setMessage("Thanks — your message was received.");
-    } catch {
-      setStatus("error");
-      setMessage("Something went wrong. Please try again or email me directly.");
-    }
+  if (!payload.name || !payload.email || !payload.project) {
+    setStatus("error");
+    setMessage("Please complete all fields.");
+    return;
   }
+
+  if (!/^\S+@\S+\.\S+$/.test(payload.email)) {
+    setStatus("error");
+    setMessage("Please enter a valid email address.");
+    return;
+  }
+
+  try {
+    const response = await fetch("/api/contact", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(payload),
+    });
+
+    const data = await response.json();
+
+    console.log("Contact API response:", response.status, data);
+
+    if (!response.ok || !data.success) {
+      setStatus("error");
+      setMessage(data.message || `Request failed (${response.status}).`);
+      return;
+    }
+
+    currentForm.reset();
+
+    setStatus("success");
+    setMessage("Thanks — your message was sent successfully.");
+  } catch (error) {
+    console.error("Contact request failed:", error);
+
+    setStatus("error");
+    setMessage("Unable to reach the contact service. Please try again.");
+  }
+}
 
   return (
     <section id="contact" className="scroll-mt-24 px-4 py-20 sm:px-6 lg:px-10 lg:py-28">
